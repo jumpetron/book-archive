@@ -3,7 +3,6 @@ const toggleSpinner = displayStyle =>{
 }
 
 
-
 const searchField = () => {
     const searchBook = document.getElementById('search-box');
     const searchText = searchBook.value;
@@ -23,9 +22,12 @@ const displaySearchResult = docs =>{
     const searchResult = document.getElementById('search-result');
     
     searchResult.textContent = '';
-    docs.forEach (doc => {
+    if(!docs){
+        console.log('mopt')
+    }
+    docs?.forEach (doc => {
         console.log(doc)
-
+    
         const div = document.createElement('div');
         div.classList.add('col-lg-4');
         div.innerHTML = `

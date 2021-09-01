@@ -6,8 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BookDaily</title>
 
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="favicon.jpg" type="image/x-icon">
+
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
+
+
 
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -16,13 +21,12 @@
         
         <div class="text-center mt-5">
             <img class="mx-auto" src="logo.png" alt="">
-            <h1>Search your Favourite Book</h1>
+            <h1 class="text-capitalize">Search your Favourite Book</h1>
             <div class="input-group mb-3 w-75 mx-auto">
-                <input id="search-box" type="text" class="form-control" placeholder="Type a book name..." aria-label="Recipient's username"
+                <input id="search-box" type="text" class="form-control" placeholder="Type a book name..."
                     aria-describedby="button-addon2">
-                <button onclick="searchField()" class="btn btn-outline-secondary" type="button">Button</button>
+                <button onclick="searchField()" class="btn btn-outline-info" type="button">Button</button>
             </div>
-            <p id="count-result">Search result found: <span id="found-result"></span></p>
         </div>
         <div class="d-flex justify-content-center">
             <div id="spinner" class="spinner-border" role="status">
@@ -37,8 +41,14 @@
         </section>
         
     </header>
+
+
+
+
+
+
     <script src="js/main.js"></script>
     <!-- Bootstrap JS  -->
-    <script src="js/bootstrap.bundle.min.js"></script>
+    <!-- <script src="js/bootstrap.bundle.min.js"></script> -->
 </body>
 </html>
