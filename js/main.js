@@ -24,7 +24,7 @@ const searchBtn = () => {
 
     const url = `https://openlibrary.org/search.json?q=${searchText}`
 
-    // load data
+    // Error handling
     const noResultFound = document.getElementById('no-result-found');
     noResultFound.textContent = '';
 
@@ -38,6 +38,7 @@ const searchBtn = () => {
         
     }
 
+    // load data
     else{
         
         // books Found
@@ -70,7 +71,7 @@ const displaySearchResult = docs =>{
         const searchResult = document.getElementById('search-result');
         searchResult.textContent = '';
 
-        // No result found
+        // Error handling
         const noResultFound = document.getElementById('no-result-found');
         noResultFound.textContent = '';
 
