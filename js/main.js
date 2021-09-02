@@ -23,22 +23,22 @@ const searchField = () => {
 }
 
 const displaySearchResult = docs =>{
-    
+
+        // Search result add
         const searchResult = document.getElementById('search-result');
         searchResult.textContent = '';
 
-        const noResultFound = document.getElementById('no-result-found');
 
+        // No result found
+        const noResultFound = document.getElementById('no-result-found');
         noResultFound.textContent = '';
 
         if(docs.length == 0){
-            
-
             const p = document.createElement('p');
             p.innerHTML = `<p class="fw-bold text-center text-warning">No Result Found</p>`
 
             noResultFound.appendChild(p)
-        } 
+        }
         
         else{
             docs?.forEach(doc => {
@@ -57,7 +57,6 @@ const displaySearchResult = docs =>{
             </div>
         </div>
         `
-                
                 searchResult.appendChild(div);
             })
         }
