@@ -28,7 +28,7 @@ const searchBtn = () => {
     const noResultFound = document.getElementById('no-result-found');
     noResultFound.textContent = '';
 
-    if(searchText == ''){
+    if(searchText === ''){
         const p = document.createElement('p');
         p.innerHTML = `<p class="fw-bold text-center text-warning">Please write something</p>`
 
@@ -75,7 +75,7 @@ const displaySearchResult = docs =>{
         const noResultFound = document.getElementById('no-result-found');
         noResultFound.textContent = '';
 
-        if(docs.length == 0){
+        if(docs.length === 0){
             const p = document.createElement('p');
             p.innerHTML = `<p class="fw-bold text-center text-warning">No Result Found</p>`
 
