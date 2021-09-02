@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BookDaily</title>
+    <title>BooksDaily</title>
 
     <!-- Favicon -->
     <link rel="shortcut icon" href="favicon.jpg" type="image/x-icon">
@@ -23,17 +23,20 @@
             <a href="https://booksdaily.netlify.app/"><img class="mx-auto" src="logo.png" alt=""></a>
             <h1 class="text-capitalize">Search your Favourite Book</h1>
             <div class="input-group mb-3 w-75 mx-auto">
-                <input id="search-box" type="text" class="form-control" placeholder="Type a book name...">
-                <button onclick="searchField()" class="btn btn-outline-info" type="button">Button</button>
+                <input id="search-box" type="text" class="form-control" placeholder="Search Here......">
+                <button onclick="searchBtn()" class="btn btn-outline-info" type="button">Button</button>
             </div>
         </div>
 
     </header>
     <main class="container">
 
+        <!-- Result Found -->
+        <div id="count-result" class="text-center text-muted">
+        </div>
+
         <!-- No Result Found -->
         <div id="no-result-found">
-            
         </div>
         <!-- Spinner -->
         <div class="d-flex justify-content-center">
@@ -43,7 +46,7 @@
         </div>
         <!-- Book Search Result -->
         <section>
-            <div id="search-result" class="row row-cols-1 row-cols-md-3 g-4">
+            <div id="search-result" class="d-flex row row-cols-1 row-cols-md-3 g-4">
             </div>
         </section>
     </main>
