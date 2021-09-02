@@ -3,7 +3,7 @@ const toggleSpinner = displayStyle =>{
 }
 
 
-
+// Fectch Data
 const searchField = () => {
     const searchBook = document.getElementById('search-box');
     const searchText = searchBook.value;
@@ -35,6 +35,7 @@ const searchField = () => {
     
 }
 
+// Display Data
 const displaySearchResult = docs =>{
 
         // Search result add
