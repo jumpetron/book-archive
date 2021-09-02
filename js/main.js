@@ -5,8 +5,9 @@ const toggleSpinner = displayStyle =>{
 
 // Add Search Result
 const toggleSearchResult = displayStyle => {
-    document.getElementById('search-result').style.display = displayStyle;
+    document.getElementById('count-result').style.display = displayStyle;
 }
+
 
 
 
@@ -14,8 +15,9 @@ const toggleSearchResult = displayStyle => {
 const searchBtn = () => {
     const searchBook = document.getElementById('search-box');
     const searchText = searchBook.value;
-    
+
     toggleSpinner('block');
+    
 
     // clear data
     searchBook.value = '';
@@ -32,11 +34,12 @@ const searchBtn = () => {
 
         noResultFound.appendChild(p)
         toggleSpinner('none')
+        toggleSearchResult('none')
         
     }
 
     else{
-
+        
         // books Found
         fetch(url)
             .then(res => res.json())
@@ -67,7 +70,6 @@ const displaySearchResult = docs =>{
         const searchResult = document.getElementById('search-result');
         searchResult.textContent = '';
 
-
         // No result found
         const noResultFound = document.getElementById('no-result-found');
         noResultFound.textContent = '';
@@ -79,6 +81,7 @@ const displaySearchResult = docs =>{
             noResultFound.appendChild(p)
 
             toggleSpinner('none')
+            toggleSearchResult('none')
         }
         
         else{
@@ -99,10 +102,10 @@ const displaySearchResult = docs =>{
         </div>
         `
                 searchResult.appendChild(div);
+                toggleSearchResult('block')
             })
         }
         
         toggleSpinner('none');
-        toggleSearchResult('block')
 }
 
