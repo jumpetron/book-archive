@@ -8,7 +8,6 @@ const searchField = () => {
     const searchBook = document.getElementById('search-box');
     const searchText = searchBook.value;
     
-
     toggleSpinner('block')
 
     // clear data
@@ -17,9 +16,23 @@ const searchField = () => {
     const url = `https://openlibrary.org/search.json?q=${searchText}`
 
     // load data
-    fetch(url)
-        .then(res => res.json())
-        .then(data => displaySearchResult(data.docs))
+    const noResultFound = document.getElementById('no-result-found');
+    noResultFound.textContent = '';
+
+    if(searchText == ''){
+        const p = document.createElement('p');
+        p.innerHTML = `<p class="fw-bold text-center text-warning">Please write something</p>`
+
+        noResultFound.appendChild(p)
+        toggleSpinner('none')
+    }
+
+    else{
+        fetch(url)
+            .then(res => res.json())
+            .then(data => displaySearchResult(data.docs))
+    }
+    
 }
 
 const displaySearchResult = docs =>{
